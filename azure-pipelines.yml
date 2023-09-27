@@ -18,6 +18,5 @@ steps:
 - script: |
     npm install -g webpack webpack-cli --save-dev
     npm install
-    npx webpack init
     npx webpack --config webpack.config.js
   displayName: 'npm install, run webpack'
