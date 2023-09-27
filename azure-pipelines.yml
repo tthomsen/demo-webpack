@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  NEXT_TELEMETRY_DISABLED: '1'
+
 steps:
 - task: NodeTool@0
   inputs:
@@ -17,7 +20,7 @@ steps:
 
 - script: |
     npm i -g yarn
-  displayName: 'install yarn'
+  displayName: 'Install yarn'
   
 - script: |
     yarn install --frozen-lockfile
