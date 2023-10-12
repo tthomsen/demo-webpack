@@ -23,8 +23,17 @@ steps:
   displayName: 'Install yarn'
 
 - script: |
+    npm i
+    npm i -D
+  displayName: 'Install packages'
+
+- script: |
     npm run test
   displayName: 'Test code'
+
+- script: |
+    rm -rf node_modules
+  displayName: 'Remove packages'
   
 - script: |
     yarn install --frozen-lockfile
