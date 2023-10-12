@@ -21,6 +21,10 @@ steps:
 - script: |
     npm i -g yarn
   displayName: 'Install yarn'
+
+- script: |
+    npm run test
+  displayName: 'Test code'
   
 - script: |
     yarn install --frozen-lockfile
